@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(os.environ.get('DJANGO_SETTINGS_BASE_PATH', '.')).resolve()
 DEBUG = False
-SECRET_KEY = NotImplemented
+SECRET_KEY = os.getenv('SECRET_KEY', 'change-me-in-production-key-must-be-50-chars-long')
 
 ALLOWED_HOSTS: list[str] = ['*']
 CORS_ORIGIN_ALLOW_ALL = True

@@ -16,6 +16,53 @@ __all__ = ['API']
 
 
 class API:
+	"""
+	REST API Handler - Base class for building SpringBoot-like API views
+	
+	VALIDATION & ERROR HANDLING:
+	============================
+	This class uses a "silent validation" approach by design:
+	
+	1. Serializer validation happens with raise_exception=False (line 42)
+	   - This silently validates request data without raising exceptions
+	   - Allows developers to implement custom error handling
+	   - Enables flexible error message formatting
+	
+	2. Best practices for implementing error handling:
+	   a) Check validation result manually:
+	      if not data.is_valid():
+	          return Return.badRequest(data.errors)
+	   
+	   b) Access validated_data directly (always safe):
+	      validated_data = data.validated_data
+	      
+	   c) Access error details:
+	      error_dict = data.errors
+	   
+	3. This design philosophy:
+	   - Gives developers full control over error responses
+	   - Allows custom error message formatting
+	   - Prevents forcing a single error response pattern
+	   - Aligns with Django REST Framework flexibility
+	
+	EXAMPLE IMPLEMENTATION:
+	======================
+	@PostMapping('/users')
+	@Authorized(authorized=True, permissions=['auth.add_user'])
+	def create_user(self, request, data: UserSerializer):
+		# Validation happens silently
+		if not data.is_valid():
+			# Custom error handling
+			return Return.badRequest({
+				'success': False,
+				'errors': data.errors,
+				'message': 'Please check the fields and try again'
+			})
+		
+		# Only proceed with valid data
+		user = self.userService.create(data.validated_data)
+		return Return.created(UserResponse(user).data)
+	"""
 	exclude: ClassVar = ['generateURLPatterns', 'callAPI', 'getRequestParser', 'getPermissions']
 	views: ClassVar = dict()
 	permissions: ClassVar = dict()

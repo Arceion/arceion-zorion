@@ -9,8 +9,9 @@ from rest_framework import status
 from rest_framework.response import Response
 
 from .JWTProvider import JWTProvider
+from .validators import StrongPasswordValidator
 
-__all__ = ['Authenticated', 'Authorized', 'JWTProvider']
+__all__ = ['Authenticated', 'Authorized', 'JWTProvider', 'StrongPasswordValidator']
 
 
 def Authorize(
