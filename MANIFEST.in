@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include .editorconfig
+include pyproject.toml
+recursive-include arceion/zorion/templates *
+recursive-include arceion/zorion/static *
+recursive-include arceion/zorion/migrations *
+recursive-exclude arceion/zorion/__pycache__ *
+recursive-exclude arceion/zorion *.pyc
+recursive-exclude arceion/zorion *.pyo
