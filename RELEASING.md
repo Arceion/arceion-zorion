@@ -17,6 +17,8 @@ This guide explains how to release arceion-zorion to PyPI using GitHub Actions w
 - PyPI account(s) at [pypi.org](https://pypi.org) and optionally [test.pypi.org](https://test.pypi.org)
 - PyPI API tokens (generated from your account settings)
 
+**⚠️ NOTE:** See [.PUBLISH_SETUP.md](./.PUBLISH_SETUP.md) for detailed authentication setup (API tokens vs Trusted Publishers)
+
 ## Setup
 
 ### Step 1: Generate PyPI API Tokens
