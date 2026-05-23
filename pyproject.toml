@@ -106,4 +106,4 @@ exclude = ["migrations/", "__pycache__/"]
 [tool.pytest.ini_options]
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 testpaths = ["arceion/zorion/tests"]
-addopts = "--tb=short"
+addopts = "--tb=short -p no:django"
