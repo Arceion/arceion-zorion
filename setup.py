@@ -12,7 +12,7 @@ setup(
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='Arceion',
-    author_email='dev@arceion.io',
+    author_email='arceionllc@gmail.com',
     url='https://github.com/Arceion/zorion',
     packages=find_packages(),
     include_package_data=True,
