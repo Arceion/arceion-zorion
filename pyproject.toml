@@ -61,8 +61,21 @@ Documentation = "https://github.com/Arceion/arceion-zorion/wiki"
 Issues = "https://github.com/Arceion/arceion-zorion/issues"
 
 [tool.setuptools]
-packages = ["arceion", "arceion.zorion"]
 include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["arceion*"]
+exclude = ["*.tests*"]
+
+[tool.setuptools.package-data]
+"" = ["*.md", "LICENSE"]
+arceion = [
+    "zorion/templates/**",
+    "zorion/static/**",
+    "zorion/migrations/**",
+    "zorion/docs/**",
+]
 
 [tool.black]
 line-length = 119
