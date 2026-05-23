@@ -34,7 +34,12 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest arceion/zorion/tests/ -v
+        # Check if there are any actual test files (test_*.py or *_tests.py)
+        if find arceion/zorion/tests -name "test_*.py" -o -name "*_tests.py" | grep -q .; then
+          pytest arceion/zorion/tests/ -v
+        else
+          echo "No actual test files found, skipping pytest. (Test utilities are available for user projects)"
+        fi
       continue-on-error: false
 
   build:

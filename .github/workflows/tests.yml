@@ -40,7 +40,12 @@ jobs:
     
     - name: Run tests with pytest
       run: |
-        pytest arceion/zorion/tests/ -v --cov=arceion/zorion --cov-report=xml
+        # Check if there are any actual test files (test_*.py or *_tests.py)
+        if find arceion/zorion/tests -name "test_*.py" -o -name "*_tests.py" | grep -q .; then
+          pytest arceion/zorion/tests/ -v --cov=arceion/zorion --cov-report=xml
+        else
+          echo "No actual test files found, skipping pytest. (Test utilities are available for user projects)"
+        fi
       continue-on-error: true
     
     - name: Upload coverage to Codecov
