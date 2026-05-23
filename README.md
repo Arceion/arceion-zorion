@@ -13,9 +13,9 @@ A lightweight Python package providing utilities, decorators, middleware, and OR
 
 ## Installation
 
-\\\ash
+```bash
 pip install arceion
-\\\
+```
 
 ## License
 

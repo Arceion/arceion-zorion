@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Arceion Zorion - Django Microservices Framework with utilities, decorators, middleware, and ORM integration for independent microservices"
 readme = "README.md"
 license = {text = "Proprietary"}
-authors = [{name = "Arceion", email = "dev@arceion.io"}]
+authors = [{name = "Arceion", email = "arceionll@gmail.com"}]
 keywords = ["django", "microservices", "framework", "rest", "api"]
 requires-python = ">=3.10"
 classifiers = [
@@ -49,10 +49,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Arceion/zorion"
-Repository = "https://github.com/Arceion/zorion.git"
-Documentation = "https://github.com/Arceion/zorion/wiki"
-Issues = "https://github.com/Arceion/zorion/issues"
+Homepage = "https://github.com/Arceion/arceion-zorion"
+Repository = "https://github.com/Arceion/arceion-zorion.git"
+Documentation = "https://github.com/Arceion/arceion-zorion/wiki"
+Issues = "https://github.com/Arceion/arceion-zorion/issues"
 
 [tool.setuptools]
 packages = ["arceion", "arceion.zorion"]
@@ -98,6 +98,6 @@ ignore_missing_imports = true
 exclude = ["migrations/", "__pycache__/"]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "arceion.zorion.app.settings.base"
+DJANGO_SETTINGS_MODULE = "arceion.zorion.app.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 testpaths = ["arceion/zorion/tests"]

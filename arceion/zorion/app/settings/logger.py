@@ -24,7 +24,7 @@ LOGGING = {
             'propagate': True,
         } for logger_name in (
             'django', 'django.request', 'django.server', 'django.db.backends', 'django.security', 'py.warnings',
-            'core', 'arceion',
+            'core', 'arceion', 'zorion', 'celery', 'celery.worker', 'celery.app.trace', 'celery.task', 'celery.beat',
         )
     },
     'root': {

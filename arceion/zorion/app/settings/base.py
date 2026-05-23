@@ -17,7 +17,7 @@ CSRF_TRUSTED_ORIGINS: list[str] = []
 
 INSTALLED_APPS = [
     # arceion zorion apps
-    'arceion.zorion.apps.arceionConfig',
+    'arceion.zorion.apps.zorionConfig',
 
     # Django apps
     'daphne',
@@ -143,9 +143,6 @@ JAZZMIN_SETTINGS = {
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     'site_brand': 'Brand',
 
-    # Logo to use for your site, must be present in static files, used for brand on top left
-    'site_logo': 'img/common/img.png',
-
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     'login_logo': None,
 
@@ -155,16 +152,11 @@ JAZZMIN_SETTINGS = {
     # CSS classes that are applied to the logo above
     'site_logo_classes': None,
 
-    # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
-    'site_icon': 'img/common/img.png',
-
     # Welcome text on the login screen
     'welcome_sign': 'Admin',
 
     # Copyright on the footer
-    'copyright': 'arceion Developers',
-
-    'search_model': ['authentication.User'],
+    'copyright': 'Arceion Developers',
 
     # Whether to display the side menu
     'show_sidebar': True,
@@ -180,7 +172,6 @@ JAZZMIN_SETTINGS = {
 
     'icons': {
         'auth': 'fas fa-users-cog',
-        'authentication.user': 'fas fa-user',
         'auth.Group': 'fas fa-users',
     },
 
@@ -189,7 +180,6 @@ JAZZMIN_SETTINGS = {
 
     'related_modal_active': False,
 
-    'custom_css': 'css/common/admin.css',
     'custom_js': None,
     'use_google_fonts_cdn': True,
     'show_ui_builder': False,
