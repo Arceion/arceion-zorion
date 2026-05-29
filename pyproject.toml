@@ -34,7 +34,6 @@ classifiers = [
 
 dependencies = [
     "Django>=5.0",
-    "django-allauth>=65.7.0",
     "django-cotton>=2.0.3",
     "djangorestframework>=3.14.0",
     "django-jazzmin>=3.0.1",
