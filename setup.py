@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='arceion-zorion',
-    version='0.2.0',
+    version='0.3.0',
     description='Arceion Zorion - Django Based Framework',
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
