@@ -1,6 +1,6 @@
-# Arceion - Django Microservices Framework
+# Zorion - Django Based Framework
 
-A lightweight Python package providing utilities, decorators, middleware, and ORM integration for building independent microservices with Django.
+A Python package providing utilities, decorators, middleware, and ORM integration for building independent microservices and projects with Django.
 
 ## Features
 - Configurable app initialization
@@ -44,12 +44,6 @@ class UserAPI(API):
         return self.response(users)
 ```
 
-## Documentation
-
-- **[Authorization & Permissions](./arceion/zorion/docs/PERMISSIONS.md)** — Permission system, decorators, best practices
-- **[Releasing to PyPI](./RELEASING.md)** — Publishing new versions
-- **[GitHub Actions Setup](../.github-actions-setup.md)** — CI/CD configuration
-
 ## Development
 
 ### Setup
@@ -65,14 +59,6 @@ pip install -e ".[dev]"
 ```bash
 pytest arceion/zorion/tests/ -v
 ```
-
-### Publishing
-
-See [RELEASING.md](./RELEASING.md) for:
-- Version management
-- TestPyPI testing
-- Production releases
-- Troubleshooting
 
 ## License
 

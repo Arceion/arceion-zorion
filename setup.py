@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 """
-Setup script for Arceion package
+Setup script for Zorion package
 """
 
 from setuptools import setup, find_packages
 
 setup(
     name='arceion-zorion',
-    version='0.1.0',
-    description='Arceion Zorion - Django Microservices Framework',
+    version='0.2.0',
+    description='Arceion Zorion - Django Based Framework',
     long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='Arceion',
@@ -18,18 +18,37 @@ setup(
     include_package_data=True,
     python_requires='>=3.10',
     install_requires=[
-        'Django>=5.0',
-        'djangorestframework>=3.14.0',
-        'python-dotenv>=1.0.0',
-        'pyyaml>=6.0',
+        "Django>=5.0",
+        "django-allauth>=65.7.0",
+        "django-cotton>=2.0.3",
+        "djangorestframework>=3.14.0",
+        "django-jazzmin>=3.0.1",
+        "django-select2>=8.4.1",
+        "python-dotenv>=1.0.0",
+        "pyyaml>=6.0",
+        "django-split-settings>=1.3.2",
+        "whitenoise>=6.5.0",
+        "django-cors-headers>=4.0.0",
+        "django-vite>=3.1.0",
+        "django-filter>=24.0.0",
+        "djangorestframework>=3.16.0",
+        "djangorestframework-simplejwt>=5.0.0",
+        "dotenv>=0.9.9",
+        "openpyxl>=3.1.5",
+        "pillow>=11.3.0",
+        "gunicorn>=23.0.0",
+        "djangorestframework-stubs>=3.16.8",
     ],
     extras_require={
         'dev': [
-            'pytest>=7.0.0',
-            'pytest-django>=4.5.2',
-            'black>=23.0.0',
-            'ruff>=0.1.0',
-            'mypy>=1.0.0',
+            "daphne>=4.1.2",
+            "django-debug-toolbar>=5.1.0",
+            "drf-spectacular[sidecar]>=0.28.0",
+            "icecream>=2.1.4",
+            "ruff>=0.11.5",
+            "pytest>=7.0.0",
+            "pytest-django>=4.5.2",
+            "pytest-cov>=4.0.0",
         ],
     },
     classifiers=[
