@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "arceion-zorion"
-version = "0.1.0"
+version = "0.2.0"
 description = "Arceion Zorion - Django Microservices Framework with utilities, decorators, middleware, and ORM integration for independent microservices"
 readme = "README.md"
 license = {text = "Proprietary"}
